@@ -1,14 +1,14 @@
-#include "object.h"
+#include "object2.h"
 #include <QKeyEvent>
 
-void object::keyPressEvent(QKeyEvent *event)
+void object2::keyPressEvent(QKeyEvent *event)
 {
     if(event->key() == Qt::Key_Up)
     {
-        setPos(x(),y()-10);
+        setPos(x(),y()-20);
     }
     else if(event->key() == Qt::Key_Down)
     {
-        setPos(x(),y()+10);
+        setPos(x(),y()+20);
     }
 }
