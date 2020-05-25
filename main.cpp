@@ -2,6 +2,7 @@
 #include <QGraphicsScene>
 #include "object1.h"
 #include "object2.h"
+#include "ball.h"
 #include <QGraphicsView>
 
 int main(int argc, char *argv[])
@@ -12,12 +13,16 @@ int main(int argc, char *argv[])
     QGraphicsScene *scene = new QGraphicsScene();
 
     // Create an item (player1) to put into the scene
-    object1 *player1 = new object1();
+    Object1 *player1 = new Object1();
     player1->setRect(0, 0, 20, 70);
 
     // Create an item (player2) to put into the scene
-    object2 *player2 = new object2();
+    Object2 *player2 = new Object2();
     player2->setRect(0, 0, 20, 70);
+
+    // Create an item (ball) to put into the scene
+    Ball *ball = new Ball();
+    ball->setRect(0, 0, 15, 15);
 
     // Make player1 focusable
     player1->setFlag(QGraphicsItem::ItemIsFocusable);
@@ -33,8 +38,13 @@ int main(int argc, char *argv[])
     // Add player2 to the scene
     scene->addItem(player2);
 
+    // Add ball to the scene
+    scene->addItem(ball);
+
     // Add a view
     QGraphicsView *view = new QGraphicsView(scene);
+    view->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+    view->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
 
     // Show a view
     view->show();
@@ -46,10 +56,13 @@ int main(int argc, char *argv[])
     scene->setSceneRect(0, 0, 1000, 800);
 
     // Set player1 at position
-    player1->setPos(10, 330);
+    player1->setPos(10, 365);
 
     // Set player2 at position
-    player2->setPos(970, 330);
+    player2->setPos(970, 365);
+
+    // Set ball at position
+    ball->setPos(490, 395);
 
     return a.exec();
 }

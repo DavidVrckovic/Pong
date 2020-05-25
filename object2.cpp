@@ -1,7 +1,7 @@
 #include "object2.h"
 #include <QKeyEvent>
 
-void object2::keyPressEvent(QKeyEvent *event)
+void Object2::keyPressEvent(QKeyEvent *event)
 {
     if(event->key() == Qt::Key_Up)
     {

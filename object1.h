@@ -3,10 +3,10 @@
 
 #include<QGraphicsRectItem>
 
-class object1: public QGraphicsRectItem
+class Object1: public QGraphicsRectItem
 {
 public:
-    void keyPressEvent(QKeyEvent * event);
+    void keyPressEvent(QKeyEvent *event);
 };
 
 #endif // OBJECT1_H
