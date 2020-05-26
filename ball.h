@@ -7,6 +7,8 @@ class Ball: public QGraphicsEllipseItem
 {
 public:
     Ball();
+public slots:
+    void move();
 };
 
 #endif // BALL_H

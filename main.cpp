@@ -4,6 +4,7 @@
 #include "object2.h"
 #include "ball.h"
 #include <QGraphicsView>
+#include <QMediaPlayer>
 
 int main(int argc, char *argv[])
 {
@@ -63,6 +64,11 @@ int main(int argc, char *argv[])
 
     // Set ball at position
     ball->setPos(490, 395);
+
+    // Play background music
+    QMediaPlayer *background_music = new QMediaPlayer();
+    background_music->setMedia(QUrl("qrc:/sounds/pong-background.mp3"));
+    background_music->play();
 
     return a.exec();
 }
