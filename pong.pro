@@ -18,17 +18,23 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     ball.cpp \
+    block.cpp \
+    game.cpp \
     main.cpp \
     mainwindow.cpp \
     object1.cpp \
     object2.cpp \
+    paddle.cpp \
     score1.cpp
 
 HEADERS += \
     ball.h \
+    block.h \
+    game.h \
     mainwindow.h \
     object1.h \
     object2.h \
+    paddle.h \
     score1.h
 
 FORMS += \

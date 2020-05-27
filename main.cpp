@@ -1,4 +1,4 @@
-#include <QApplication>
+/*#include <QApplication>
 #include <QGraphicsScene>
 #include <QGraphicsView>
 #include <QMediaPlayer>
@@ -77,6 +77,24 @@ int main(int argc, char *argv[])
     QMediaPlayer *background_music = new QMediaPlayer();
     background_music->setMedia(QUrl("qrc:/sounds/pong-background.mp3"));
     background_music->play();
+
+    return a.exec();
+}
+*/
+
+
+#include <QApplication>
+#include "game.h"
+
+Game* game;
+
+int main(int argc, char *argv[])
+{
+    QApplication a(argc, argv);
+
+    game = new Game();
+    game->show();
+    game->start();
 
     return a.exec();
 }
