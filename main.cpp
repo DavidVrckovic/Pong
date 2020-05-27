@@ -1,10 +1,12 @@
 #include <QApplication>
 #include <QGraphicsScene>
+#include <QGraphicsView>
+#include <QMediaPlayer>
+#include <QTimer>
 #include "object1.h"
 #include "object2.h"
 #include "ball.h"
-#include <QGraphicsView>
-#include <QMediaPlayer>
+#include "score1.h"
 
 int main(int argc, char *argv[])
 {
@@ -25,6 +27,9 @@ int main(int argc, char *argv[])
     Ball *ball = new Ball();
     ball->setRect(0, 0, 15, 15);
 
+    // Create a score
+    Score1 *score1 = new Score1();
+
     // Make player1 focusable
     player1->setFlag(QGraphicsItem::ItemIsFocusable);
     player1->setFocus();
@@ -41,6 +46,9 @@ int main(int argc, char *argv[])
 
     // Add ball to the scene
     scene->addItem(ball);
+
+    // Add score to the scene
+    scene->addItem(score1);
 
     // Add a view
     QGraphicsView *view = new QGraphicsView(scene);

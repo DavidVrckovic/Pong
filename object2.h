@@ -1,7 +1,7 @@
 #ifndef OBJECT2_H
 #define OBJECT2_H
 
-#include<QGraphicsRectItem>
+#include <QGraphicsRectItem>
 
 class Object2: public QGraphicsRectItem
 {

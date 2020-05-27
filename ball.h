@@ -1,10 +1,13 @@
 #ifndef BALL_H
 #define BALL_H
 
-#include<QGraphicsEllipseItem>
+#include <QGraphicsEllipseItem>
+#include <QObject>
+#include "score1.h"
 
-class Ball: public QGraphicsEllipseItem
+class Ball: public QObject, public QGraphicsEllipseItem
 {
+    Q_OBJECT
 public:
     Ball();
 public slots:

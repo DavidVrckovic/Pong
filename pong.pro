@@ -21,13 +21,15 @@ SOURCES += \
     main.cpp \
     mainwindow.cpp \
     object1.cpp \
-    object2.cpp
+    object2.cpp \
+    score1.cpp
 
 HEADERS += \
     ball.h \
     mainwindow.h \
     object1.h \
-    object2.h
+    object2.h \
+    score1.h
 
 FORMS += \
     mainwindow.ui
