@@ -2,4 +2,9 @@
     <qresource prefix="/sounds">
         <file>pong-background.mp3</file>
     </qresource>
+    <qresource prefix="/Slike">
+        <file>rick.jpg</file>
+        <file>rickgame.jpg</file>
+        <file>pickle.png</file>
+    </qresource>
 </RCC>

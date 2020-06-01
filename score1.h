@@ -9,8 +9,7 @@ public:
     Score1(QGraphicsItem *parent = 0);
     void increase1();
     int getScore1();
-private:
-    int score;
+    int score1;
 };
 
 #endif // SCORE1_H

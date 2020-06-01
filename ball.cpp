@@ -54,10 +54,10 @@ extern Game *game;
 Ball::Ball(QGraphicsItem *parent): QGraphicsEllipseItem(parent), QObject()
 {
     // draw rect
-    setRect(0,0,50,50);
+    setRect(0,0,30,30);
     QBrush brush;
     brush.setStyle(Qt::SolidPattern);
-    brush.setColor(Qt::red);
+    brush.setColor(Qt::green);
     setBrush(brush);
 
     // move up right initially
@@ -180,8 +180,8 @@ void Ball::handleBlockCollision()
 
             // delete block(s)
             game->scene->removeItem(block);
-            game->score1->increase1();
             delete block;
+            game->score1->increase1();
         }
     }
 }

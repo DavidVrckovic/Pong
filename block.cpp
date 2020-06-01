@@ -4,9 +4,9 @@
 Block::Block(QGraphicsItem *parent): QGraphicsRectItem(parent)
 {
     // draw rect
-    setRect(50,0,100,50);
+    setRect(40,0,100,50);
     QBrush brush;
     brush.setStyle(Qt::SolidPattern);
-    brush.setColor(Qt::blue);
+    brush.setColor(Qt::yellow);
     setBrush(brush);
 }

@@ -7,19 +7,21 @@
 
 class Game: public QGraphicsView
 {
+    Q_OBJECT
 public:
     // constructors
     Game(QWidget* parent=NULL);
 
-    // public methods
-    void start();
+    void displayMainMenu();
+
+    QGraphicsScene* scene;
+    Score1 *score1;
+
     void createBlockCol(double x);
     void creatBlockGrid();
 
-    // public attributes
-    QGraphicsScene* scene;
-
-    Score1 *score1;
+public slots:
+    void start();
 
 };
 
